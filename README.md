@@ -1,0 +1,1 @@
+Practice ASP.NET Core Clean Architecture based on the pluralsight course
