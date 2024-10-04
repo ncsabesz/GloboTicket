@@ -6,12 +6,12 @@ using MediatR;
 
 namespace GloboTicket.TicketManagement.Application.Features.Categories.Queries.GetCategoriesList;
 
-public class GetCategoriesListQueryHandle : IRequestHandler<GetCategoriesListQuery, List<CategoryListVm>>
+public class GetCategoriesListQueryHandler : IRequestHandler<GetCategoriesListQuery, List<CategoryListVm>>
 {
     private readonly IAsyncRepository<Category> _categoryRepository;
     private readonly IMapper _mapper;
 
-    public GetCategoriesListQueryHandle(IMapper mapper, IAsyncRepository<Category> categoryRepository)
+    public GetCategoriesListQueryHandler(IMapper mapper, IAsyncRepository<Category> categoryRepository)
     {
         _mapper = mapper;
         _categoryRepository = categoryRepository;

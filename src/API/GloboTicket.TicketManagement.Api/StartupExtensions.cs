@@ -55,7 +55,7 @@ public static class StartupExtensions
             var context = scope.ServiceProvider.GetService<GloboTicketDbContext>();
             if(context != null)
             {
-                await context.Database.EnsureDeletedAsync();
+                // await context.Database.EnsureDeletedAsync();
                 await context.Database.MigrateAsync();
             }
         }
